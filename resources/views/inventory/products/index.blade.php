@@ -25,7 +25,7 @@
                                 <th scope="col">Base Price</th>
                                 <th scope="col">Stock</th>
                                 <th scope="col">Faulty</th>
-                                <th scope="col">Total Sold</th>
+                                <th scope="col">Total Assign Items</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>

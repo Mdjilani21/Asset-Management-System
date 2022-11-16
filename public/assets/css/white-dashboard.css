@@ -10695,11 +10695,11 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 }
 
 .btn-primary {
-  background: #4554c2;
+  background: #3d6147;
   background-image: -webkit-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2);
   background-image: -o-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2);
   background-image: -moz-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2);
-  background-image: linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2);
+  background-image: linear-gradient(to bottom left, #3d6147, #3d6147, #3d6147);
   background-size: 210% 210%;
   background-position: top right;
   background-color: #4554c2;
@@ -10722,7 +10722,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .btn-primary.active:focus,
 .btn-primary.active:hover {
   background-color: #2d0ccc !important;
-  background-image: linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
+  background-image: linear-gradient(to bottom left, #3d6147, #3d6147, #3d6147) !important;
   background-image: -webkit-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
   background-image: -o-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
   background-image: -moz-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
@@ -10766,13 +10766,13 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #4554c2;
-  border-color: #4554c2;
+  background-color: #94855a;
+  border-color: #94855a;
 }
 
 .btn-primary.btn-simple {
-  color: #4554c2;
-  border-color: #4554c2;
+  color: #3d6147;
+  border-color: #3d6147;
   background: transparent;
 }
 
@@ -10780,7 +10780,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary.btn-simple:focus,
 .btn-primary.btn-simple:active,
 .btn-primary.btn-simple:not(:disabled):not(.disabled):active {
-  color: #4554c2;
+  color: #94855a;
   border-color: #4554c2;
   background-color: transparent !important;
   background-image: none !important;
@@ -10790,7 +10790,7 @@ fieldset[disabled] .btn-primary.active {
 
 
 .btn-primary.btn-simple.active {
-  border-color: #4554c2 !important;
+  border-color: #94855a !important;
 }
 
 .btn-primary.btn-simple.active:hover,
@@ -10798,8 +10798,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary.btn-simple.active:active,
 .btn-primary.btn-simple.active:not(:disabled):not(.disabled):active {
   color: #ffffff;
-  border-color: #4554c2;
-  background-image: linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
+  border-color: #94855a;
+  background-image: linear-gradient(to bottom left, #94855a, #94855a, #94855a) !important;
   background-image: -webkit-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
   background-image: -o-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
   background-image: -moz-linear-gradient(to bottom left, #4554c2, #2d0ccc, #4554c2) !important;
@@ -14848,7 +14848,7 @@ table.tablesorter thead tr .headerSortDown {
   background: -webkit-linear-gradient(0deg, #1d032c 0%, #4e65e1 100%);
   background: -o-linear-gradient(0deg, #1d032c 0%, #4e65e1 100%);
   background: -moz-linear-gradient(0deg, #1d032c 0%, #4e65e1 100%);
-  background: linear-gradient(0deg, #1d032c 0%, #4e65e1 100%);
+  background: linear-gradient(0deg, #94855a 5%, #3d6147 80%);
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;

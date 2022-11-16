@@ -7,7 +7,7 @@
                 <div class="card-header ">
                     <div class="row">
                         <div class="col-sm-6 text-left">
-                            <h5 class="card-category">Total sales</h5>
+                            <h5 class="card-category">Total Assign Item</h5>
                             <h2 class="card-title">Annual yield</h2>
                         </div>
                         <div class="col-sm-6">
@@ -50,7 +50,7 @@
         <div class="col-lg-4">
             <div class="card card-chart">
                 <div class="card-header">
-                    <h5 class="card-category">Last Month Income</h5>
+                    <h5 class="card-category">Last Month Assign Items Cost</h5>
                     <h3 class="card-title"><i class="tim-icons icon-money-coins text-primary"></i>{{ format_money($semesterincomes) }}</h3>
                 </div>
                 <div class="card-body">
@@ -94,10 +94,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Pending Sales</h4>
+                            <h4 class="card-title">Pending Assign Item</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('sales.create') }}" class="btn btn-sm btn-primary">New Sale</a>
+                            <a href="{{ route('sales.create') }}" class="btn btn-sm btn-primary">New Assign Items</a>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                                         <td>{{ format_money($sale->transactions->sum('amount')) }}</td>
                                         <td>{{ format_money($sale->products->sum('total_amount')) }}</td>
                                         <td class="td-actions text-right">
-                                            <a href="{{ route('sales.show', ['sale' => $sale]) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="View Sale">
+                                            <a href="{{ route('sales.show', ['sale' => $sale]) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="View Assign Items">
                                                 <i class="tim-icons icon-zoom-split"></i>
                                             </a>
                                         </td>
@@ -195,7 +195,7 @@
                                             @elseif($transaction->type == 'payment')
                                                 Payment
                                             @elseif($transaction->type == 'income')
-                                                Income
+                                                Assign Items Cost
                                             @else
                                                 {{ $transaction->type }}
                                             @endif
@@ -233,10 +233,10 @@
                 <div class="modal-body">
                     <div class="d-flex justify-content-between">
                         <a href="{{ route('transactions.create', ['type' => 'payment']) }}" class="btn btn-sm btn-primary">Payment</a>
-                        <a href="{{ route('transactions.create', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Income</a>
+                        <a href="{{ route('transactions.create', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Assign Items Cost</a>
                         <a href="{{ route('transactions.create', ['type' => 'expense']) }}" class="btn btn-sm btn-primary">Expense</a>
                         <a href="{{ route('sales.create') }}" class="btn btn-sm btn-primary">Sale</a>
-                        <a href="{{ route('transfer.create') }}" class="btn btn-sm btn-primary">Transfer</a>
+                        <a href="{{ route('transfer.create') }}" class="btn btn-sm btn-primary">Transfer Payment</a>
                     </div>
                 </div>
             </div>

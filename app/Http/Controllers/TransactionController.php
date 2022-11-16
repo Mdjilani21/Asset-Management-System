@@ -21,7 +21,7 @@ class TransactionController extends Controller
     public function index()
     {
         $transactionname = [
-            'income' => 'Income',
+            'income' => 'Assign Items Cost',
             'payment' => 'Payment',
             'expense' => 'Expense',
             'transfer' => 'Transfer'

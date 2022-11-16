@@ -8,11 +8,11 @@
                 <div class="card-header">
                 <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Transfers</h4>
+                            <h4 class="card-title">Transfers Payments</h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('transfer.create') }}" class="btn btn-sm btn-primary">
-                                Register Transfer
+                                Register Transfer Payments
                             </a>
                         </div>
                     </div>

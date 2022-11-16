@@ -7,10 +7,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Income</h4>
+                            <h4 class="card-title">Assign Items Cost</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('transactions.create', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Register Income</a>
+                            <a href="{{ route('transactions.create', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Register Assign Items Cost</a>
                         </div>
                     </div>
                 </div>
@@ -42,13 +42,13 @@
                                                     <i class="tim-icons icon-zoom-split"></i>
                                                 </a>
                                             @else
-                                                <a href="{{ route('transactions.edit', $transaction) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Income">
+                                                <a href="{{ route('transactions.edit', $transaction) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Assign Items Cost">
                                                     <i class="tim-icons icon-pencil"></i>
                                                 </a>
                                                 <form action="{{ route('transactions.destroy', $transaction) }}" method="post" class="d-inline">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Delete Income" onclick="confirm('Are you sure you want to delete this entry? There will be no record left.') ? this.parentElement.submit() : ''">
+                                                    <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Delete Assign Items Cost" onclick="confirm('Are you sure you want to delete this entry? There will be no record left.') ? this.parentElement.submit() : ''">
                                                         <i class="tim-icons icon-simple-remove"></i>
                                                     </button>
                                                 </form>

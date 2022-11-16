@@ -21,7 +21,7 @@
                             <thead>
                                 <th>Period</th>
                                 <th>Transactions</th>
-                                <th>Income</th>
+                                <th>Assign Items Cost</th>
                                 <th>Expenses</th>
                                 <th>Payments</th>
                                 <th>Cash Balance</th>
@@ -151,10 +151,10 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-8">
-                        <h4 class="card-title">Sales Statistics</h4>
+                        <h4 class="card-title">Assign Items Statistics</h4>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">View Sales</a>
+                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">View Assign Items</a>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <table class="table">
                     <thead>
                         <th>Period</th>
-                        <th>Sales</th>
+                        <th>Assign Items</th>
                         <th>Clients</th>
                         <th>Total Stock</th>
                         <th data-toggle="tooltip" data-placement="bottom" title="Promedio de ingresos por cada venta">Average C / V</th>

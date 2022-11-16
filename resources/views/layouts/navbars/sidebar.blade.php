@@ -31,7 +31,7 @@
                         <li @if ($pageSlug == 'sales') class="active " @endif>
                             <a href="{{ route('sales.index')  }}">
                                 <i class="tim-icons icon-bag-16"></i>
-                                <p>Sales</p>
+                                <p>Assign Items</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'expenses') class="active " @endif>
@@ -43,13 +43,13 @@
                         <li @if ($pageSlug == 'incomes') class="active " @endif>
                             <a href="{{ route('transactions.type', ['type' => 'income'])  }}">
                                 <i class="tim-icons icon-credit-card"></i>
-                                <p>Income</p>
+                                <p>Assign Items Cost</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'transfers') class="active " @endif>
                             <a href="{{ route('transfer.index')  }}">
                                 <i class="tim-icons icon-send"></i>
-                                <p>Transfers</p>
+                                <p>Transfers Payment</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'payments') class="active " @endif>

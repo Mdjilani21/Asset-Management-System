@@ -14,9 +14,9 @@
                             <th>Category</th>
                             <th>Name</th>
                             <th>Stock</th>
-                            <th>Annual Sales</th>
+                            <th>Annual Assign Item</th>
                             <th>Average Price</th>
-                            <th>Annual Income</th>
+                            <th>Annual Assign Item Cost</th>
                             <th></th>
                         </thead>
                         <tbody>
@@ -46,7 +46,7 @@
         <div class="col-md-6">
             <div class="card card-tasks">
                 <div class="card-header">
-                    <h4 class="card-title">Statistics by Income (TOP 15)</h4>
+                    <h4 class="card-title">Statistics by Assign Items Cost (TOP 15)</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-full-width table-responsive">
@@ -55,8 +55,8 @@
                                 <th>ID</th>
                                 <th>Category</th>
                                 <th>Name</th>
-                                <th>Sold</th>
-                                <th>Income</th>
+                                <th>Assign Items</th>
+                                <th>Cost</th>
                             </thead>
                             <tbody>
                                 @foreach ($soldproductsbyincomes as $soldproduct)
@@ -86,7 +86,7 @@
                                 <th>ID</th>
                                 <th>Category</th>
                                 <th>Name</th>
-                                <th>Sold</th>
+                                <th>Assign Item</th>
                                 <th>Average Price</th>
                             </thead>
                             <tbody>

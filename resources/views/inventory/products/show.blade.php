@@ -17,7 +17,7 @@
                             <th>Defective Stock</th>
                             <th>Base price</th>
                             <th>Average Price</th>
-                            <th>Total sales</th>
+                            <th>Total Assign Item</th>
                             <th>Income Produced</th>
                         </thead>
                         <tbody>
@@ -43,7 +43,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Latest Sales</h4>
+                    <h4 class="card-title">Latest Assign Item</h4>
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -64,7 +64,7 @@
                                     <td>{{ format_money($sold->price) }}</td>
                                     <td>{{ format_money($sold->total_amount) }}</td>
                                     <td class="td-actions text-right">
-                                        <a href="{{ route('sales.show', $sold->sale_id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="View Sale">
+                                        <a href="{{ route('sales.show', $sold->sale_id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="View Assign Items">
                                             <i class="tim-icons icon-zoom-split"></i>
                                         </a>
                                     </td>

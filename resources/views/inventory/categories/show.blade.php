@@ -48,7 +48,7 @@
                             <th>Base price</th>
                             <th>Average Price</th>
                             <th>Total sales</th>
-                            <th>Income Produced</th>
+                            <th>Assign Items Cost Produced</th>
                             <th></th>
                         </thead>
                         <tbody>

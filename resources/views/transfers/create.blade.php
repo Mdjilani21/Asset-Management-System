@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Register Transfer</h4>
+                            <h4 class="card-title">Register Transfer Payments</h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('transfer.index') }}" class="btn btn-sm btn-primary">
@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <form method="post" action="{{ route('transfer.store') }}" autocomplete="off">
                         @csrf
-                        <h6 class="heading-small text-muted mb-4">Transfer Information</h6>
+                        <h6 class="heading-small text-muted mb-4">Transfer Payments Information</h6>
                         <div class="pl-lg-4">
                             <div class="form-group{{ $errors->has('title') ? ' has-danger' : '' }}">
                                 <label class="form-control-label" for="input-title">Title</label>
