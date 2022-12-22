@@ -15,7 +15,7 @@ class CreateClientsTableMigration extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('document_type', 1)->default('V');
+            $table->char('document_type', 1)->default('Head Office');
             $table->integer('document_id')->unique();
             $table->string('name');
             $table->string('email')->nullable();

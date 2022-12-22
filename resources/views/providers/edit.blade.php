@@ -28,8 +28,8 @@
                                     @include('alerts.feedback', ['field' => 'name'])
                                 </div>
                                 <div class="form-group{{ $errors->has('description') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-description">Description</label>
-                                    <input type="text" name="description" id="input-description" class="form-control form-control-alternative{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Description" value="{{ old('description', $provider->description) }}" required>
+                                    <label class="form-control-label" for="input-description">Address</label>
+                                    <input type="text" name="description" id="input-description" class="form-control form-control-alternative{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Address" value="{{ old('description', $provider->description) }}" required>
                                     @include('alerts.feedback', ['field' => 'description'])
                                 </div>
                                 <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Sales', 'pageSlug' => 'sales', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Assign Items', 'pageSlug' => 'Assign Items', 'section' => 'transactions'])
 
 @section('content')
     @include('alerts.success')

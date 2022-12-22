@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Manage Sale', 'pageSlug' => 'sales', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Manage Assign Items', 'pageSlug' => 'Assign Items', 'section' => 'transactions'])
 
 @section('content')
     @include('alerts.success')
@@ -18,7 +18,7 @@
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-sm btn-primary">
-                                            Delete Sale
+                                            Delete Assign Items
                                         </button>
                                     </form>
                                 @else

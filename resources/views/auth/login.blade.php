@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'login-page', 'page' => 'Laravel Inventory', 'contentClass' => 'login-page', 'section' => 'auth'])
+@extends('layouts.app', ['class' => 'login-page', 'page' => 'Bengal Inventory', 'contentClass' => 'login-page', 'section' => 'auth'])
 
 @section('content')
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
@@ -7,7 +7,7 @@
 
             <div class="card card-login card-white">
                 <div class="card-header">
-                    <img src="{{ asset('assets') }}/img/card-primary.png" alt="">
+                    <img src="assets/img/card-primary.png" alt="">
                     <h1 class="card-title">Login</h1>
                 </div>
                 <div class="card-body">
@@ -26,7 +26,7 @@
                                 <i class="tim-icons icon-lock-circle"></i>
                             </div>
                         </div>
-                        <input type="password" placeholder="Clave" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                        <input type="password" placeholder="Password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                         @include('alerts.feedback', ['field' => 'password'])
                     </div>
                 </div>
@@ -37,11 +37,11 @@
                             <a href="{{ route('register') }}" class="link footer-link">Create Account</a>
                         </h6>
                     </div>
-                    {{-- <div class="pull-right">
+                    <div class="pull-right">
                         <h6>
-                            <a href="{{ route('password.request') }}" class="link footer-link">I forgot the passwod</a>
+                            <a href="{{ route('password.request') }}" class="link footer-link">I forgot the password</a>
                         </h6>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </form>

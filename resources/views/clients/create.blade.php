@@ -1,6 +1,8 @@
 @extends('layouts.app', ['page' => 'Register Client', 'pageSlug' => 'clients', 'section' => 'clients'])
 
 @section('content')
+<script rel="javascript" type="text/javascript" href="js/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <div class="container-fluid mt--7">
         <div class="row">
             <div class="col-xl-12 order-xl-1">
@@ -27,19 +29,19 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-1">
-                                        <label class="form-control-label" for="input-document_type">Type</label>
+                                        <label class="form-control-label" for="input-document_type">Offices</label>
                                         <select name="document_type" id="input-document_type" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
-                                            @foreach (['V', 'E', 'P', 'RIF'] as $document_type)
+                                            {{-- @foreach (['Head Office', 'Jatrabari', 'Panchabati', 'Tushvandar', 'Lakhmipur'] as $document_type)
                                                 @if($document_type == old('document_type'))
                                                     <option value="{{$document_type}}" selected>{{$document_type}}</option>
                                                 @else
                                                     <option value="{{$document_type}}">{{$document_type}}</option>
                                                 @endif
-                                            @endforeach
+                                            @endforeach --}}
                                         </select>
                                     </div>
                                     <div class="col">
-                                        <label class="form-control-label" for="input-document_id">Document Number</label>
+                                        <label class="form-control-label" for="input-document_id">Employee ID</label>
                                         <input type="number" name="document_id" id="input-document_id" class="form-control form-control-alternative{{ $errors->has('document_id') ? ' is-invalid' : '' }}" placeholder="Document Number" value="{{ old('document_id') }}" required>
                                         @include('alerts.feedback', ['field' => 'document_id'])
 
@@ -67,4 +69,48 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            // on product change event
+            $('#input-name').on('click', function() {
+                var table = $(this).val();
+                // console.log(table);
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $("meta[name='csrf-token']").attr('content')
+                    }
+                });
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://www.bilil.net:8999/api/common-dropdowns/get-plans',
+                    success: function(response) {
+                        console.log(response);
+                        $('#input-document_type').html('');
+                        if (response.success) {
+                            $('#input-document_type').append($("<option />").val(0).text(
+                                'Select Office'));
+                            if (response.data.length > 0) {
+                                $.each(response.data, function(res) {
+                                    // console.log('input-document_type');
+                                    // console.log(response.data[res]);
+                                    $('#input-document_type').append($("<option />").val(response
+                                        .data[
+                                            res].Table).text(response.data[res]
+                                        .Name));
+                                });
+                            }
+                        } else {
+                            $('#input-document_type').append($("<option />").val(0).text(
+                                'Select Office'));
+                        }
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

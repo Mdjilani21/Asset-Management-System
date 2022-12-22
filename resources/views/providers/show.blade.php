@@ -12,7 +12,7 @@
                         <thead>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th>Address</th>
                             <th>Email</th>
                             <th>Telephone</th>
                             <th>Payment information</th>

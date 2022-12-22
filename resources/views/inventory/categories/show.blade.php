@@ -47,7 +47,7 @@
                             <th>Defective Stock</th>
                             <th>Base price</th>
                             <th>Average Price</th>
-                            <th>Total sales</th>
+                            <th>Total Assign Items</th>
                             <th>Assign Items Cost Produced</th>
                             <th></th>
                         </thead>

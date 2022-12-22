@@ -1,1 +1,1 @@
-## Laravel Inventory
+## Bengal Inventory
