@@ -75,7 +75,7 @@
                             <div class="block block-three"></div>
                             <div class="block block-four"></div>
                             <a href="#">
-                                <img class="avatar" src="{{ asset('assets/img/bayzid.jpg') }}" alt="">
+                                <img class="avatar" src="{{ asset('assets/img/avatar.jpg') }}" alt="">
                                 <h5 class="title">{{ auth()->user()->name }}</h5>
                             </a>
                             <p class="description"></p>

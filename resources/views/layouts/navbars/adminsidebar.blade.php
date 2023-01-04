@@ -2,16 +2,15 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
-                <a href="{{ route('home') }}">
+                <a href="{{ route('adminhome') }}">
                     <i class="tim-icons icon-chart-bar-32"></i>
                     <p>Dashboard</p>
                 </a>
-                
             </li>
             <li>
                 <a data-toggle="collapse" href="#transactions" {{ $section == 'transactions' ? 'aria-expanded=true' : '' }}>
                     <i class="tim-icons icon-bank" ></i>
-                    <span class="nav-link-text">Assign Items</span>
+                    <span class="nav-link-text">Transactions</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -23,42 +22,42 @@
                                 <p>Statistics</p>
                             </a>
                         </li>
-                        {{-- <li @if ($pageSlug == 'transactions') class="active " @endif>
+                        <li @if ($pageSlug == 'transactions') class="active " @endif>
                             <a href="{{ route('transactions.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
                                 <p>All</p>
                             </a>
-                        </li> --}}
+                        </li>
                         <li @if ($pageSlug == 'sales') class="active " @endif>
                             <a href="{{ route('sales.index')  }}">
                                 <i class="tim-icons icon-bag-16"></i>
                                 <p>Assign Items</p>
                             </a>
                         </li>
-                        {{-- <li @if ($pageSlug == 'expenses') class="active " @endif>
+                        <li @if ($pageSlug == 'expenses') class="active " @endif>
                             <a href="{{ route('transactions.type', ['type' => 'expense'])  }}">
                                 <i class="tim-icons icon-coins"></i>
                                 <p>Expenses</p>
                             </a>
-                        </li> --}}
-                        {{-- <li @if ($pageSlug == 'incomes') class="active " @endif>
+                        </li>
+                        <li @if ($pageSlug == 'incomes') class="active " @endif>
                             <a href="{{ route('transactions.type', ['type' => 'income'])  }}">
                                 <i class="tim-icons icon-credit-card"></i>
                                 <p>Assign Items Cost</p>
                             </a>
-                        </li> --}}
-                        {{-- <li @if ($pageSlug == 'transfers') class="active " @endif>
+                        </li>
+                        <li @if ($pageSlug == 'transfers') class="active " @endif>
                             <a href="{{ route('transfer.index')  }}">
                                 <i class="tim-icons icon-send"></i>
                                 <p>Transfers Payment</p>
                             </a>
-                        </li> --}}
-                        {{-- <li @if ($pageSlug == 'payments') class="active " @endif>
+                        </li>
+                        <li @if ($pageSlug == 'payments') class="active " @endif>
                             <a href="{{ route('transactions.type', ['type' => 'payment'])  }}">
                                 <i class="tim-icons icon-money-coins"></i>
                                 <p>Payments</p>
                             </a>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -66,7 +65,7 @@
             <li>
                 <a data-toggle="collapse" href="#inventory" {{ $section == 'inventory' ? 'aria-expanded=true' : '' }}>
                     <i class="tim-icons icon-app"></i>
-                    <span class="nav-link-text">Asset</span>
+                    <span class="nav-link-text">Inventory</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -114,12 +113,12 @@
                 </a>
             </li>
 
-            {{-- <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('methods.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
                     <p>Methods and Accounts</p>
                 </a>
-            </li> --}}
+            </li>
 
 
             <!-- <li>
@@ -163,18 +162,18 @@
                                 <p>My profile</p>
                             </a>
                         </li>
-                        {{-- <li @if ($pageSlug == 'users-list') class="active " @endif>
+                        <li @if ($pageSlug == 'users-list') class="active " @endif>
                             <a href="{{ route('users.index')  }}">
                                 <i class="tim-icons icon-notes"></i>
                                 <p>Manage Users</p>
                             </a>
-                        </li> --}}
-                        {{-- <li @if ($pageSlug == 'users-create') class="active " @endif>
+                        </li>
+                        <li @if ($pageSlug == 'users-create') class="active " @endif>
                             <a href="{{ route('users.create')  }}">
                                 <i class="tim-icons icon-simple-add"></i>
                                 <p>New user</p>
                             </a>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </li>

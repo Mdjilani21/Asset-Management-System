@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/admin', 'HomeController@adminindex')->name('adminhome')->middleware('auth');
+
+// Route::get('/admin', 'HomeController@adminindex')->name('adminhome')->middleware('is_admin');
 
 Route::group(['middleware' => 'auth'], function () {
 

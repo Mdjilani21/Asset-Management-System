@@ -1,7 +1,7 @@
 @extends('layouts.app', ['pageSlug' => 'tstats', 'page' => 'Statistics', 'section' => 'transactions'])
 
 @section('content')
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -45,6 +45,49 @@
                         </table>
                 </div>
             </div>
+        </div>
+    </div> --}}
+
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Assign Items Statistics</h4>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">View Assign Items</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <th>Period</th>
+                        <th>Assign Items</th>
+                        <th>Clients</th>
+                        <th>Total Stock</th>
+                        <th data-toggle="tooltip" data-placement="bottom" title="Average Price">Average of Total Amount</th>
+                        <th>Billed Amount</th>
+                        <th>To Finalize</th>
+                    </thead>
+                    <tbody>
+                        @foreach ($salesperiods as $period => $data)
+                            <tr>
+                                <td>{{ $period }}</td>
+                                <td>{{ $data->count() }}</td>
+                                <td>{{ $data->groupBy('client_id')->count() }}</td>
+                                <td>{{ $data->where('finalized_at', '!=', null)->map(function ($sale) {return $sale->products->sum('qty');})->sum() }}</td>
+                                <td>{{ format_money($data->avg('total_amount')) }}</td>
+                                <td>{{ format_money($data->where('finalized_at', '!=', null)->map(function ($sale) {return $sale->products->sum('total_amount');})->sum()) }}</td>
+                                <td>{{ $data->where('finalized_at', null)->count() }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -103,7 +146,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <div class="card card-tasks">
                 <div class="card-header">
                     <div class="row">
@@ -142,49 +185,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-8">
-                        <h4 class="card-title">Assign Items Statistics</h4>
-                    </div>
-                    <div class="col-4 text-right">
-                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">View Assign Items</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <table class="table">
-                    <thead>
-                        <th>Period</th>
-                        <th>Assign Items</th>
-                        <th>Clients</th>
-                        <th>Total Stock</th>
-                        <th data-toggle="tooltip" data-placement="bottom" title="Promedio de ingresos por cada venta">Average C / V</th>
-                        <th>Billed Amount</th>
-                        <th>To Finalize</th>
-                    </thead>
-                    <tbody>
-                        @foreach ($salesperiods as $period => $data)
-                            <tr>
-                                <td>{{ $period }}</td>
-                                <td>{{ $data->count() }}</td>
-                                <td>{{ $data->groupBy('client_id')->count() }}</td>
-                                <td>{{ $data->where('finalized_at', '!=', null)->map(function ($sale) {return $sale->products->sum('qty');})->sum() }}</td>
-                                <td>{{ format_money($data->avg('total_amount')) }}</td>
-                                <td>{{ format_money($data->where('finalized_at', '!=', null)->map(function ($sale) {return $sale->products->sum('total_amount');})->sum()) }}</td>
-                                <td>{{ $data->where('finalized_at', null)->count() }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
-    </div>
+    
 @endsection

@@ -30,7 +30,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
                         <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
+                            <a href="#" class="nav-item dropdown-item">{{ __('Nizam responded to your email') }}</a>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
@@ -48,8 +48,12 @@
                 </li> -->
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        
                         <div class="photo">
-                            <img src="{{ asset('assets/img/bayzid.jpg') }}" alt="{{ __('Profile Photo') }}">
+                            <img src="{{ asset('assets/img/avatar.jpg') }}" alt="{{ __('Profile Photo') }}">
+                        </div>
+                        <div>
+                            {{ Auth::user()->name }}
                         </div>
                         <b class="caret d-none d-lg-block d-xl-block"></b>
                         <p class="d-lg-none">{{ __('Log out') }}</p>
