@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'reset-page', 'page' => 'Bengal Inventory', 'contentClass' => 'reset-page', 'section' => 'auth'])
+@extends('layouts.app', ['class' => 'reset-page', 'page' => 'Bengal Asset Management System', 'contentClass' => 'reset-page', 'section' => 'auth'])
 
 @section('content')
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
