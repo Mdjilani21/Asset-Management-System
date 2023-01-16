@@ -40,30 +40,30 @@ class HomeController extends Controller
         ]);
     }
 
-    public function adminindex()
-    {
-        $monthlyBalanceByMethod = $this->getMethodBalance()->get('monthlyBalanceByMethod');
-        $monthlyBalance = $this->getMethodBalance()->get('monthlyBalance');
+    // public function adminindex()
+    // {
+    //     $monthlyBalanceByMethod = $this->getMethodBalance()->get('monthlyBalanceByMethod');
+    //     $monthlyBalance = $this->getMethodBalance()->get('monthlyBalance');
 
-        $anualsales = $this->getAnnualSales();
-        $anualclients = $this->getAnnualClients();
-        $anualproducts = $this->getAnnualProducts();
+    //     $anualsales = $this->getAnnualSales();
+    //     $anualclients = $this->getAnnualClients();
+    //     $anualproducts = $this->getAnnualProducts();
         
-        return view('admindashboard', [
-            'monthlybalance'            => $monthlyBalance,
-            'monthlybalancebymethod'    => $monthlyBalanceByMethod,
-            'lasttransactions'          => Transaction::latest()->limit(20)->get(),
-            'unfinishedsales'           => Sale::where('finalized_at', null)->get(),
-            'anualsales'                => $anualsales,
-            'anualclients'              => $anualclients,
-            'anualproducts'             => $anualproducts,
-            'lastmonths'                => array_reverse($this->getMonthlyTransactions()->get('lastmonths')),
-            'lastincomes'               => $this->getMonthlyTransactions()->get('lastincomes'),
-            'lastexpenses'              => $this->getMonthlyTransactions()->get('lastexpenses'),
-            'semesterexpenses'          => $this->getMonthlyTransactions()->get('semesterexpenses'),
-            'semesterincomes'           => $this->getMonthlyTransactions()->get('semesterincomes')
-        ]);
-    }
+    //     return view('admindashboard', [
+    //         'monthlybalance'            => $monthlyBalance,
+    //         'monthlybalancebymethod'    => $monthlyBalanceByMethod,
+    //         'lasttransactions'          => Transaction::latest()->limit(20)->get(),
+    //         'unfinishedsales'           => Sale::where('finalized_at', null)->get(),
+    //         'anualsales'                => $anualsales,
+    //         'anualclients'              => $anualclients,
+    //         'anualproducts'             => $anualproducts,
+    //         'lastmonths'                => array_reverse($this->getMonthlyTransactions()->get('lastmonths')),
+    //         'lastincomes'               => $this->getMonthlyTransactions()->get('lastincomes'),
+    //         'lastexpenses'              => $this->getMonthlyTransactions()->get('lastexpenses'),
+    //         'semesterexpenses'          => $this->getMonthlyTransactions()->get('semesterexpenses'),
+    //         'semesterincomes'           => $this->getMonthlyTransactions()->get('semesterincomes')
+    //     ]);
+    // }
 
     public function getMethodBalance()
     {

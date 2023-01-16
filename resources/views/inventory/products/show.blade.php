@@ -49,7 +49,7 @@
                     <table class="table">
                         <thead>
                             <th>Date</th>
-                            <th>Sale ID</th>
+                            <th>Assign ID</th>
                             <th>Quantity</th>
                             <th>Price Unit</th>
                             <th>Total Amount</th>

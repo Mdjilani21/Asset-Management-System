@@ -160,7 +160,7 @@ class SaleController extends Controller
     {
         switch($request->all()['type']) {
             case 'income':
-                $request->merge(['title' => 'Payment Received from Sale ID: ' . $request->get('sale_id')]);
+                $request->merge(['title' => 'Payment Received from : ' . $request->get('sale_id')]);
                 break;
 
             case 'expense':
@@ -190,11 +190,11 @@ class SaleController extends Controller
     {
         switch($request->get('type')) {
             case 'income':
-                $request->merge(['title' => 'Payment Received from Sale ID: '. $request->get('sale_id')]);
+                $request->merge(['title' => 'Payment Received from Assign ID: '. $request->get('sale_id')]);
                 break;
 
             case 'expense':
-                $request->merge(['title' => 'Sale Return Payment ID: '. $request->get('sale_id')]);
+                $request->merge(['title' => 'Assign Return Payment ID: '. $request->get('sale_id')]);
 
                 if($request->get('amount') > 0) {
                     $request->merge(['amount' => (float) $request->get('amount') * (-1)]);
